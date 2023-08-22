@@ -25,7 +25,7 @@ from normalization2 import PaddingWarp
 from get_method_here import get_method_here, def_model
 
 
-def runnig_tests(data_path, output_dir, weights_dir, csv_file):
+def run_test(data_path, output_dir, weights_dir, csv_file):
     DATA_PATH = data_path
 
     print("CURRENT OUT FOLDER")
@@ -192,7 +192,6 @@ def main():
     parser.add_argument("--weights_dir", type=str, help="The path to the weights of the networks", default="./weights")
     parser.add_argument("--csv_file", type=str, help="The path to the csv file", default="./TestSetCSV/operations.csv")
     args = vars(parser.parse_args())
-    runnig_tests(args['data_dir'], args['out_dir'], args['weights_dir'], args['csv_file'])
+    run_test(args['data_dir'], args['out_dir'], args['weights_dir'], args['csv_file'])
 
-
-main()
+# main()
